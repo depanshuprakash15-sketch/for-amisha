@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Amisha: My Proposal</title>
+    <meta property="og:title" content="For Amisha 💕">
+    <meta property="og:description" content="A special question for someone very special">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fdf2f8;
+            color: #831843;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(131, 24, 67, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .heart-decoration {
+            position: absolute;
+            font-size: 200px;
+            color: rgba(219, 39, 119, 0.1);
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #db2777;
+        }
+        
+        .amisha-name {
+            color: #831843;
+            background-color: #fce7f3;
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .proposal-text {
+            font-size: 1.5rem;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        
+        .big-question {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #db2777;
+            margin: 40px 0;
+            padding: 20px;
+            background: #fdf2f8;
+            border-radius: 15px;
+            border: 3px solid #f9a8d4;
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-button i {
+            font-size: 1.8rem;
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f9ff;
+            border-radius: 15px;
+            border-left: 5px solid #0ea5e9;
+            text-align: left;
+        }
+        
+        .instructions h3 {
+            color: #0369a1;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .preview-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            background: linear-gradient(135deg, #f9a8d4 0%, #f472b6 100%);
+            border-radius: 15px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .preview-image-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .share-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .share-btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 2px solid #db2777;
+            background: white;
+            color: #db2777;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .share-btn:hover {
+            background: #fdf2f8;
+        }
+        
+        .mobile-preview {
+            display: none;
+            width: 300px;
+            background: #f0f0f0;
+            border-radius: 25px;
+            padding: 20px 15px;
+            margin: 30px auto;
+            border: 10px solid #333;
+            position: relative;
+        }
+        
+        .mobile-preview:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: #333;
+            border-radius: 0 0 15px 15px;
+        }
+        
+        .mobile-screen {
+            background: white;
+            height: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .mobile-screen-content {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .big-question {
+                font-size: 1.8rem;
+            }
+            
+            .mobile-preview {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .proposal-text {
+                font-size: 1.2rem;
+            }
+            
+            .big-question {
+                font-size: 1.5rem;
+            }
+            
+            .whatsapp-button {
+                padding: 15px 25px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            color: rgba(219, 39, 119, 0.2);
+            font-size: 24px;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts-container"></div>
+    
+    <div class="container">
+        <div class="heart-decoration">
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <div class="content">
+            <h1>Proposal for <span class="amisha-name">Amisha</span> 💕</h1>
+            
+            <div class="preview-image">
+                <div class="preview-image-content">
+                    <i class="fas fa-heart" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                    <div>A Special Message For You</div>
+                </div>
+            </div>
+            
+            <p class="proposal-text">
+                I've created something special just for you. Click the button below to open a beautiful, personalized proposal website.
+            </p>
+            
+            <div class="big-question">
+                Will you open my heart's message? 💌
+            </div>
+            
+            <a href="#" class="whatsapp-button" id="whatsappBtn">
+                <i class="fab fa-whatsapp"></i> Send to Amisha on WhatsApp
+            </a>
+            
+            <div class="instructions">
+                <h3><i class="fas fa-info-circle"></i> How to Send:</h3>
+                <ol>
+                    <li>Click the WhatsApp button above</li>
+                    <li>It will open WhatsApp with a pre-written message</li>
+                    <li>Select Amisha as the recipient</li>
+                    <li>Add any personal message you'd like</li>
+                    <li>Send it and wait for her response! 💕</li>
+                </ol>
+            </div>
+            
+            <div class="mobile-preview">
+                <div class="mobile-screen">
+                    <div class="mobile-screen-content">
+                        <h3 style="color: #831843;">For Amisha 💖</h3>
+                        <p style="margin: 15px 0;">You have a special message waiting...</p>
+                        <div style="font-size: 3rem; margin: 20px 0;">💌</div>
+                        <p>Tap to open the surprise!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="share-options">
+                <button class="share-btn" id="copyLinkBtn">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+                <button class="share-btn" id="testBtn">
+                    <i class="fas fa-eye"></i> Preview Proposal
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The actual proposal page (hidden) -->
+    <div id="proposalPage" style="display: none;">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>For Amisha: A Special Question</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+                /* Same styles as the original proposal website */
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                
+                body {
+                    background-color: #fdf2f8;
+                    color: #831843;
+                    overflow-x: hidden;
+                    min-height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    flex: 1;
+                }
+                
+                header {
+                    text-align: center;
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, #fbcfe8 0%, #f9a8d4 100%);
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 10px 20px rgba(131, 24, 67, 0.1);
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                    color: #831843;
+                }
+                
+                .heart-icon {
+                    color: #db2777;
+                    animation: heartbeat 1.5s infinite;
+                    margin: 0 10px;
+                }
+                
+                @keyframes heartbeat {
+                    0% { transform: scale(1); }
+                    50% { transform: scale(1.2); }
+                    100% { transform: scale(1); }
+                }
+                
+                .amisha-name {
+                    color: #db2777;
+                    font-weight: bold;
+                }
+                
+                .proposal-box {
+                    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+                    padding: 30px;
+                    border-radius: 15px;
+                    text-align: center;
+                    margin: 40px auto;
+                    max-width: 600px;
+                    border: 2px dashed #db2777;
+                }
+                
+                .proposal-question {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    color: #831843;
+                    margin-bottom: 30px;
+                }
+                
+                .button-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    margin-top: 20px;
+                    flex-wrap: wrap;
+                }
+                
+                .response-btn {
+                    padding: 15px 30px;
+                    font-size: 1.2rem;
+                    border: none;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: all 0.3s ease;
+                }
+                
+                .yes-btn {
+                    background-color: #10b981;
+                    color: white;
+                }
+                
+                .yes-btn:hover {
+                    background-color: #059669;
+                    transform: scale(1.05);
+                }
+                
+                .no-btn {
+                    background-color: #ef4444;
+                    color: white;
+                }
+                
+                .no-btn:hover {
+                    background-color: #dc2626;
+                }
+                
+                .response-message {
+                    display: none;
+                    margin-top: 30px;
+                    padding: 20px;
+                    background-color: #d1fae5;
+                    border-radius: 15px;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #065f46;
+                    border: 3px solid #10b981;
+                }
+                
+                .whatsapp-reply {
+                    margin-top: 30px;
+                    padding: 15px;
+                    background-color: #25D366;
+                    color: white;
+                    border-radius: 10px;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                
+                @media (max-width: 768px) {
+                    h1 {
+                        font-size: 1.8rem;
+                    }
+                    
+                    .proposal-question {
+                        font-size: 1.5rem;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <header>
+                    <h1>For My Dearest <span class="amisha-name">Amisha</span> <i class="fas fa-heart heart-icon"></i></h1>
+                    <p>You make every moment magical, and today I have a very important question for you...</p>
+                </header>
+                
+                <div class="proposal-box">
+                    <div class="proposal-question">
+                        Amisha, from the moment we met, my life has been brighter, happier, and more meaningful. Every day with you is a blessing. 
+                        <br><br>
+                        Will you make me the happiest person and marry me?
+                    </div>
+                    
+                    <div class="button-container">
+                        <button class="response-btn yes-btn" id="proposalYesBtn">
+                            <i class="fas fa-check-circle"></i> YES! With all my heart!
+                        </button>
+                        <button class="response-btn no-btn" id="proposalNoBtn">
+                            <i class="fas fa-times-circle"></i> No
+                        </button>
+                    </div>
+                    
+                    <div class="response-message" id="proposalResponseMessage">
+                        <!-- Response will appear here -->
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="https://wa.me/?text=I%20have%20something%20special%20to%20ask%20you%20%F0%9F%92%96" class="whatsapp-reply" id="whatsappReplyBtn">
+                            <i class="fab fa-whatsapp"></i> Reply on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('proposalYesBtn').addEventListener('click', function() {
+                    const message = document.getElementById('proposalResponseMessage');
+                    message.innerHTML = `
+                        <i class="fas fa-heart" style="color: #db2777; font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h3>You've made me the happiest person in the world!</h3>
+                        <p>I promise to love, cherish, and honor you every day of my life.</p>
+                        <p>This is just the beginning of our forever together, my love!</p>
+                    `;
+                    message.style.display = 'block';
+                    
+                    // Update WhatsApp reply link
+                    document.getElementById('whatsappReplyBtn').href = 
+                        'https://wa.me/?text=YES%21%20A%20thousand%20times%20YES%21%20%F0%9F%92%96%20I%20can%27t%20wait%20to%20spend%20forever%20with%20you%21';
+                });
+                
+                document.getElementById('proposalNoBtn').addEventListener('click', function() {
+                    const noBtn = document.getElementById('proposalNoBtn');
+                    const yesBtn = document.getElementById('proposalYesBtn');
+                    
+                    // Move the no button
+                    noBtn.style.position = 'absolute';
+                    noBtn.style.left = Math.random() * 80 + '%';
+                    noBtn.style.top = Math.random() * 80 + '%';
+                    
+                    // Increase size of yes button
+                    yesBtn.style.transform = 'scale(1.2)';
+                    
+                    const message = document.getElementById('proposalResponseMessage');
+                    message.innerHTML = `
+                        <i class="fas fa-smile-wink" style="color: #db2777; font-size: 2rem; margin-bottom: 15px;"></i>
+                        <h3>Are you sure about that? 😉</h3>
+                        <p>Maybe give it another thought? I promise to make you the happiest woman in the world!</p>
+                    `;
+                    message.style.display = 'block';
+                });
+            </script>
+        </body>
+        </html>
+    </div>
+
+    <script>
+        // Create floating hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                
+                // Random position and animation
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 10 + Math.random() * 10;
+                
+                heart.style.left = `${left}%`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                
+                container.appendChild(heart);
+            }
+        }
+        
+        // WhatsApp button functionality
+        document.getElementById('whatsappBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create a shareable message with the proposal link
+            const message = encodeURIComponent(`💌 *A Special Message For You, Amisha* 💌\n\nI've created something special just for you. Please open this link to see my heartfelt message:\n\n`) + 
+                           encodeURIComponent(window.location.origin + window.location.pathname + '?proposal=foramisha') +
+                           encodeURIComponent(`\n\nWith all my love ❤️`);
+            
+            // Open WhatsApp with the message
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        });
+        
+        // Copy link button
+        document.getElementById('copyLinkBtn').addEventListener('click', function() {
+            const link = window.location.href.split('?')[0] + '?proposal=foramisha';
+            
+            // Use the Clipboard API if available
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(link).then(function() {
+                    alert('Link copied to clipboard! Now you can paste it in WhatsApp to send to Amisha.');
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = link;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Link copied to clipboard! Now you can paste it in WhatsApp to send to Amisha.');
+            }
+        });
+        
+        // Test/preview button
+        document.getElementById('testBtn').addEventListener('click', function() {
+            // Create a preview window with the proposal
+            const proposalHTML = document.getElementById('proposalPage').innerHTML;
+            const previewWindow = window.open('', '_blank', 'width=800,height=600');
+            previewWindow.document.write(proposalHTML);
+            previewWindow.document.close();
+        });
+        
+        // Check if this page was opened with the proposal parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('proposal') === 'foramisha') {
+            // Show the proposal directly
+            document.body.innerHTML = document.getElementById('proposalPage').innerHTML;
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+        });
+        
+        // Generate a simple preview image (in a real scenario, you'd create an actual image)
+        function generatePreviewImage() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 630;
+            const ctx = canvas.getContext('2d');
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#fbcfe8');
+            gradient.addColorStop(1, '#f9a8d4');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Add text
+            ctx.fillStyle = '#831843';
+            ctx.font = 'bold 60px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('For Amisha', 600, 300);
+            
+            ctx.font = '40px Arial';
+            ctx.fillText('A Special Message 💌', 600, 380);
+            
+            // Convert to data URL
+            return canvas.toDataURL('image/png');
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
